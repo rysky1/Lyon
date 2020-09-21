@@ -7,6 +7,114 @@ body {
   padding: 0;
 }
 
+/*----------------spnav------------*/
+#spnav {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  #spnav {
+    display: block;
+  }
+}
+
+.menu-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 2;
+  width: 50px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #592C00;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .menu-btn {
+    width: 35px;
+    height: 35px;
+    top: 55px;
+  }
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: 25vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #592C00;
+}
+
+@media (max-width: 1024px) {
+  .menu {
+    width: 25vh;
+    height: 40vh;
+  }
+}
+
+.menu__item {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 1024px) {
+  .menu__item {
+    margin-top: 25px;
+  }
+}
+
+.menu__item a {
+  display: block;
+  font-size: 40px;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  padding: .5em 1em;
+}
+
+.menu__item a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 1024px) {
+  .menu__item a {
+    font-size: 25px;
+  }
+}
+
+.menu {
+  -webkit-transform: translateX(100vw);
+          transform: translateX(100vw);
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
+}
+
+.menu.is-active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
 /*------------------------header--------------------------*/
 .header {
   width: 100%;
@@ -591,6 +699,8 @@ body {
 @media (max-width: 1024px) {
   .news-content {
     width: 90%;
+    -webkit-box-shadow: 0 2px 8px #592C00;
+            box-shadow: 0 2px 8px #592C00;
   }
 }
 
