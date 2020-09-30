@@ -40,16 +40,13 @@ body{
   top: 0;
   right: 0;
   z-index: 1;
-  width: 25vw;
-  height: 100vh;
+  width: auto;
+  height: auto;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   background: #592C00;
-  @media(max-width:1024px){
-    width: 25vh;
-    height: 40vh;
-  }
 }
 .menu__item{
   width: 100%;
